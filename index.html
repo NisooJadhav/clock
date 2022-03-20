@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Clock</title>
+    <style>
+        p{
+            font-family: 'Impact';
+            font-size: 100px;
+            color:white;
+            text-shadow: 2px 3px 2px rgb(0, 0, 0);
+            vertical-align: center;
+            padding-top: 100px;
+            padding: center;
+            text-align: center;
+        }
+        hr{
+            width: 35%;
+            opacity: 50%;
+        }
+       body{
+            
+            background-size: 100%;
+       }
+    </style>
+    <script>
+    function load()
+    {
+     var d=new Date
+        var h=d.getHours()
+        var m=d.getMinutes()
+        var s=d.getSeconds()
+        //alert(h+":"+m+":"+s)
+        document.getElementById("h").innerHTML=h+" : "+m+" : "+s;
+        setInterval("load()",1000);
+    }
+    </script>
+
+    <script>
+        var bgImg = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg']
+        var selectBG = bgImg[Math.floor(Math.random() * bgImg.length)];
+        //var r = Math.floor(Math.random() * 10)
+        $(document).ready(function()
+        {
+            $('body').css({"background-image":"url(' + selectBG + ')"});
+        });
+        //' + selectBG + '
+    </script>
+</head>
+<body onload="load()">
+   
+    <p id="h" align="center"></p>
+
+</body>
+</html>
