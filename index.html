@@ -26,6 +26,13 @@
             background:url("1.jpg");
             background-size: 100%;
        }
+       @media screen and (max-width:650px)
+           {
+        #h{
+               font-size:75px;
+               }
+        }
+        
     </style>
     <script>
     function load()
@@ -41,6 +48,7 @@
     </script>
 
     <script>
+        /*
         var bgImg = ['https://github.com/NisooJadhav/clock/blob/main/1.jpg','https://github.com/NisooJadhav/clock/blob/main/2.jpg','https://github.com/NisooJadhav/clock/blob/main/3.jpg','https://github.com/NisooJadhav/clock/blob/main/4.jpg','https://github.com/NisooJadhav/clock/blob/main/5.jpg','https://github.com/NisooJadhav/clock/blob/main/6.jpg','https://github.com/NisooJadhav/clock/blob/main/7.jpg']
         var selectBG = bgImg[Math.floor(Math.random() * bgImg.length)];
         //var r = Math.floor(Math.random() * 10)
@@ -48,7 +56,7 @@
         {
             $('body').css({"background-image":"url(' + selectBG + ')"});
         });
-        //' + selectBG + '
+        //' + selectBG + '*/
     </script>
 </head>
 <body onload="load()">
