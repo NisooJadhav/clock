@@ -1,95 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clock</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans+Mono:wght@600&display=swap');
-
-      html {
-        font: 2vmax/1 'bungee';
-      }
-
-      body {
-        background: url(https://github.com/NisooJadhav/clock/blob/main/5.jpg?raw=true);
-        background-size: 100%;
-        overflow: hidden;
-      }
-
-      main {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        width: 100vw;
-        min-height: 100vh;
-        margin: 0 auto;
-      }
-
-      time {
-        display: inline-block;
-        width: 50vw;
-        height: 20vh;
-        font-size: 4rem;
-        line-height: 2;
-        color: white;
-        text-shadow: 2px 3px 2px rgb(0, 0, 0);
-        text-align: center;
-      }
-
-      @media screen and (max-width: 650px) {
-        html {
-          font-size: 3vmax;
-        }
-        time {
-          width: 90vw;
-          font-size: 4rem;
-        }
-        body {
-          background-size: cover;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <main>
-      <time></time>
-    </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-      const bgImg = [
-        'https://i.ibb.co/0m6612N/static.gif',
-        'https://i.ibb.co/2cNgPHW/matrix.jpg',
-        'https://i.ibb.co/LdQzP9j/wall1.jpg',
-        'https://i.ibb.co/pKPKR1v/wall0.jpg',
-        'https://raw.githubusercontent.com/NisooJadhav/clock/main/1.jpg',
-        'https://raw.githubusercontent.com/NisooJadhav/clock/main/2.jpg',
-        'https://raw.githubusercontent.com/NisooJadhav/clock/main/3.jpg',
-        'https://raw.githubusercontent.com/NisooJadhav/clock/main/4.jpg',
-        'https://raw.githubusercontent.com/NisooJadhav/clock/main/5.jpg',
-        'https://raw.githubusercontent.com/NisooJadhav/clock/main/6.jpg',
-        'https://raw.githubusercontent.com/NisooJadhav/clock/main/7.jpg'
-      ];
-
-      function clock() {
-        const d = new Date();
-        let h = d.getHours().toString().padStart(2, '0');
-        let m = d.getMinutes().toString().padStart(2, '0');
-        let s = d.getSeconds().toString().padStart(2, '0');
-        document.querySelector('time').innerHTML = h + ':' + m + ':' + s;
-      }
-
-      function bgSwitch(array) {
-        const randomRng =
-          Math.floor(Math.random() * (array.length - 1 - 0 + 1)) + 0;
-        let current = bgImg[randomRng];
-        document.body.style.cssText = `background: url(${current})`;
-      }
-
-      bgSwitch(bgImg);
-      setInterval(clock, 1000);
-    </script>
-  </body>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clock</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <main>
+    <time></time>
+  </main>
+  <script src="app.js"></script>
+</body>
 </html>
