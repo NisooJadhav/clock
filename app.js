@@ -78,6 +78,13 @@ function clock() {
     let h = d.getHours().toString().padStart(2, '0');
     let m = d.getMinutes().toString().padStart(2, '0');
     let s = d.getSeconds().toString().padStart(2, '0');
-    document.querySelector('time').innerHTML = h + ':' + m + ':' + s;
+    let session='PM';
+    if(h>=12){
+        session='PM';
+    }
+    else{
+        session='AM';
+    }
+    document.querySelector('time').innerHTML = h + ':' + m + ':' + s+" "+ session;
 }
 setInterval(clock, 1000);
