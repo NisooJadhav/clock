@@ -24,13 +24,20 @@ main {
   margin: 0 auto;
 }
 
-time {
+time, .ampm {
   display: inline-block;
   font-size: 4rem;
   color: white;
   text-shadow: 5px 3px 10px #00000075;
   z-index: 5;
+}
+
+time {
   width: 6ch;
+}
+
+.ampm {
+  margin-left: 1ch;
 }
 
 @media screen and (max-width: 650px) {

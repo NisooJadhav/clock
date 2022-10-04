@@ -11,11 +11,13 @@ function clock() {
     let s = d.getSeconds().toString().padStart(2, '0');
     let session='PM';
     if(h>=12){
+        h = (h-12).toString().padStart(2, '0');
         session='PM';
     }
     else{
         session='AM';
     }
-    document.querySelector('time').innerHTML = h + ':' + m + ':' + s+" "+ session;
+    document.querySelector('time').innerHTML = h + ':' + m + ':' + s;
+    document.querySelector('.ampm').innerHTML = session;
 }
 setInterval(clock, 1000);
