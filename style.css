@@ -26,7 +26,7 @@ main {
 
 time {
   display: inline-block;
-  font-size: 5rem;
+  font-size: 4rem;
   color: white;
   text-shadow: 5px 3px 10px #00000075;
   z-index: 5;
@@ -40,7 +40,7 @@ time {
 
   time {
     /* width: 90vw; */
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 
   body {
