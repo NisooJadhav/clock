@@ -30,6 +30,7 @@ time {
   color: white;
   text-shadow: 5px 3px 10px #00000075;
   z-index: 5;
+  width: 6ch;
 }
 
 @media screen and (max-width: 650px) {
