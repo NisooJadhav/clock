@@ -16,6 +16,7 @@ function clock() {
     else{
         session='AM';
     }
-    document.querySelector('time').innerHTML = h + ':' + m + ':' + s+" "+ session;
+    document.querySelector('time').innerHTML = h + ':' + m + ':' + s;
+    document.querySelector('.ampm').innerHTML = session;
 }
 setInterval(clock, 1000);
