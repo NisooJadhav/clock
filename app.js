@@ -11,6 +11,7 @@ function clock() {
     let s = d.getSeconds().toString().padStart(2, '0');
     let session='PM';
     if(h>=12){
+        h = (h-12).toString().padStart(2, '0');
         session='PM';
     }
     else{
