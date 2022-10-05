@@ -1,11 +1,15 @@
 # Digital Clock 
 
 ![This is Digital Clock image](/image/github-clock.png)
-[The Digital Clock]("https://nisoojadhav.github.io/clock")
+[The Digital Clock](https://nisoojadhav.github.io/clock)
 
 ## About Project
 Digital Clock made using simple JavaScript and setting background images randomly using jQuery.
-[Site lives]("https://nisoojadhav.github.io/clock")
+
+### You can pin 📌 this [site](https://nisoojadhav.github.io/clock) in your browser, that will serve as Aesthetic Clock + Wallpaper + Daily Quotes(coming soon!) Site.
+
+![pin](https://user-images.githubusercontent.com/68807845/194076153-be4ca8cb-cf55-4359-99d6-af2cb17856ae.png)
+
 
 ## Skills
 - HTML
@@ -55,5 +59,5 @@ setInterval(clock, 1000);
 ## Notice
 
 
-- Please give a star on Github
+- Show your love 💛 give us a star 🌟
 - Also you can contribute in this project.
