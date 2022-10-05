@@ -56,8 +56,10 @@ setInterval(clock, 1000);
 
 ----------
 
-## Notice
+### - Show your love 💛 give us a star 🌟
+### - You can contribute to this project.
 
-
-- Show your love 💛 give us a star 🌟
-- Also you can contribute in this project.
+## Contributors
+<a href="https://github.com/nisoojadhav/clock/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=nisoojadhav/clock" />
+</a>
