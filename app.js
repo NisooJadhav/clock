@@ -21,3 +21,24 @@ function clock() {
     document.querySelector('.ampm').innerHTML = session;
 }
 setInterval(clock, 1000);
+
+
+// Quotes
+const quote = document.querySelector('q');
+const cite = document.querySelector('cite');
+
+updateQuote();
+
+// API -> https://github.com/lukePeavey/quotable
+async function updateQuote() {
+    const response = await fetch("https://api.quotable.io/random");
+    const data = await response.json();
+    if (response.ok) {
+    // Update DOM elements
+    quote.innerText = data.content;
+    cite.textContent = '- ' + data.author + ' -';
+    } else {
+    quote.textContent = "An error occured";
+    console.log(data);
+    }
+}

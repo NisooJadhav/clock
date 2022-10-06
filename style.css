@@ -17,11 +17,16 @@ body {
 main {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   align-content: center;
   width: 100vw;
   min-height: 100vh;
   margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.clock {
+  align-self: center;
 }
 
 time, .ampm {
@@ -30,6 +35,8 @@ time, .ampm {
   color: white;
   text-shadow: 5px 3px 10px #00000075;
   z-index: 5;
+  flex-grow: 1;
+  margin: auto 0;
 }
 
 time {
@@ -40,13 +47,35 @@ time {
   margin-left: 1ch;
 }
 
+.quote {
+  position: absolute;
+  width: 100vw;
+  bottom: 10px;
+  font-size: 1em;
+}
+
+q, cite {
+  color: white;
+  margin: 0 auto;
+  text-shadow: 5px 3px 10px #00000075;
+  display:block;
+  text-align: center;
+  width: 75vw;
+}
+
+cite {
+  margin-top: 10px;
+  font-size: 0.75em;
+}
+
+
+
 @media screen and (max-width: 650px) {
   html {
     font-size: 3vmax;
   }
 
-  time {
-    /* width: 90vw; */
+  time, .ampm {
     font-size: 2rem;
   }
 
@@ -64,5 +93,13 @@ time {
     align-items: center;
     justify-content: center;
     align-content: center;
+  }
+
+  q {
+    font-size: 0.75em;
+  }
+
+  cite {
+    font-size: 0.5em;
   }
 }
