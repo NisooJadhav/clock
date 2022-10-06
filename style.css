@@ -51,13 +51,16 @@ time {
   position: absolute;
   width: 100vw;
   bottom: 10px;
+  font-size: 1em;
 }
 
 q, cite {
   color: white;
+  margin: 0 auto;
   text-shadow: 5px 3px 10px #00000075;
   display:block;
   text-align: center;
+  width: 75vw;
 }
 
 cite {
@@ -72,8 +75,7 @@ cite {
     font-size: 3vmax;
   }
 
-  time {
-    /* width: 90vw; */
+  time, .ampm {
     font-size: 2rem;
   }
 
@@ -91,5 +93,13 @@ cite {
     align-items: center;
     justify-content: center;
     align-content: center;
+  }
+
+  q {
+    font-size: 0.75em;
+  }
+
+  cite {
+    font-size: 0.5em;
   }
 }
