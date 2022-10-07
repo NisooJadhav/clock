@@ -36,7 +36,7 @@ async function updateQuote() {
     if (response.ok) {
     // Update DOM elements
     quote.innerText = data.content;
-    cite.textContent = '- ' + data.author + ' -';
+    cite.textContent = '~ ' + data.author + ' ~';
     } else {
     quote.textContent = "An error occured";
     console.log(data);
