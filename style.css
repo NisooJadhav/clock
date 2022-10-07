@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans+Mono:wght@600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
 
 html {
   font: 2vmax/1 "bungee";
@@ -24,23 +24,16 @@ main {
   min-height: 100vh;
   margin: 0 auto;
   flex-wrap: wrap;
-  height: 50px;
 }
 
 .clock {
-
+  padding: 1.25rem;
   align-self: center;
-
-  background-color:rgb(0, 0, 0);
-   
-    opacity: .5;
-      border-radius: 20px;
-  
-    
-    
-
-
-
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 time {
@@ -49,8 +42,8 @@ time {
   color: white;
   z-index: 5;
   flex-grow: 1;
-  margin: 20px 20px 20px 20px;
-
+  margin: auto 0;
+  margin-right: 0;
 }
 
 .ampm {
@@ -71,14 +64,14 @@ time {
 }
 
 .quote {
-  font-family: 'caveat', cursive;
+  font-family: "caveat", cursive;
   position: absolute;
   width: 100vw;
   bottom: 20px;
 }
 
-q{
-    font-size: 1.5em;  
+q {
+  font-size: 1.5em;
 }
 
 q,
@@ -101,10 +94,11 @@ cite {
     font-size: 3vmax;
   }
 
-  time{
+  time {
     font-size: 2rem;
   }
-  .ampm{
+
+  .ampm {
     font-size: 1rem;
     margin-left: 1.2ch;
   }
