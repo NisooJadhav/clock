@@ -40,8 +40,8 @@ main {
 time, .ampm {
   display: inline-block;
   font-size: 4rem;
-  color: rgb(255, 255, 255);
- 
+  color: white;
+  text-shadow: 5px 3px 10px #00000075;
   z-index: 5;
   flex-grow: 1;
   margin: 20px 20px 20px 20px;
