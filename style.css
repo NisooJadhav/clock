@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans+Mono:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans+Mono:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
 html {
-  font: 2vmax/1 'bungee';
+  font: 2vmax/1 "bungee";
 }
 
 body {
@@ -12,6 +13,7 @@ body {
   background-attachment: fixed;
   padding: 0;
   margin: 0;
+  /* animation: fadeIn ease 5s; */
 }
 
 main {
@@ -26,39 +28,71 @@ main {
 }
 
 .clock {
+  padding: 1.25rem;
   align-self: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
-time, .ampm {
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+time {
   display: inline-block;
   font-size: 4rem;
   color: white;
-  text-shadow: 5px 3px 10px #00000075;
   z-index: 5;
   flex-grow: 1;
   margin: auto 0;
+}
+
+.ampm {
+  display: inline-block;
+  font-size: 2rem;
+  color: white;
+  z-index: 5;
+  flex-grow: 1;
+  margin: auto 0;
+}
+
+.ampm {
+  margin-left: 1.7ch;
 }
 
 time {
   width: 6ch;
 }
 
-.ampm {
-  margin-left: 1ch;
-}
-
 .quote {
+  font-family: 'caveat', cursive;
   position: absolute;
   width: 100vw;
   bottom: 10px;
-  font-size: 1em;
 }
 
-q, cite {
+q{
+    font-size: 1.5em;  
+}
+q,
+cite {
   color: white;
   margin: 0 auto;
-  text-shadow: 5px 3px 10px #00000075;
-  display:block;
+  text-shadow: 5px 2px 5px #000;
+  display: block;
   text-align: center;
   width: 75vw;
 }
@@ -68,14 +102,13 @@ cite {
   font-size: 0.75em;
 }
 
-
-
 @media screen and (max-width: 650px) {
   html {
     font-size: 3vmax;
   }
 
-  time, .ampm {
+  time,
+  .ampm {
     font-size: 2rem;
   }
 
@@ -86,6 +119,9 @@ cite {
     background-attachment: fixed;
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   main {
