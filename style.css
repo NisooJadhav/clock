@@ -39,7 +39,7 @@ main {
 time {
   display: inline-block;
   font-size: 4rem;
-  color: white;
+  color: rgb(255, 255, 255);
   z-index: 5;
   flex-grow: 1;
   margin: auto 0;
@@ -49,7 +49,7 @@ time {
 .ampm {
   display: inline-block;
   font-size: 2rem;
-  color: white;
+  color: rgb(255, 255, 255);
   z-index: 5;
   flex-grow: 1;
   margin: auto 0;
