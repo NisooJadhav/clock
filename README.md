@@ -22,7 +22,7 @@ Digital Clock made using simple JavaScript and setting background images randoml
 ----------
 
 ### - Show your love 💛 give us a star 🌟
-### - You can contribute to this project.
+### - Contribute to this [project](https://github.com/NisooJadhav/clock/blob/main/CONTRIBUTING.md).
 
 ## Contributors
 <a href="https://github.com/nisoojadhav/clock/graphs/contributors">
