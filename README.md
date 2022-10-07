@@ -16,8 +16,9 @@ Digital Clock made using simple JavaScript and setting background images randoml
 
 - Clock
 - Inspirational Quotes
-- Jokes to make your day!(soon...)
-- Top news from around the World(soon...)
+- Jokes to make your day! (soon...)
+- Facts to enrich your knowledge (soon...)
+- Top news from around the World (soon...)
 
 ----------
 
