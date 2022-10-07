@@ -130,3 +130,115 @@ cite {
     font-size: 0.5em;
   }
 }
+.timer-clock__button{
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+}
+.timer-button{
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  border-style: none;
+  border-radius: 2rem;
+  font: 2vmax/1 "bungee";
+}
+.timer-button:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 1px grey;
+}
+.clock-button{
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  border-style: none;
+  border-radius: 2rem;
+  font: 2vmax/1 "bungee";
+}
+.clock-button:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 1px grey;
+}
+.hidden{
+  display: none;
+}
+
+.timer-display{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  width: 80%;
+}
+.timer-container{
+  height: 15%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0 3rem;
+  padding-top: 0.4rem;
+  margin: 0;
+  border-radius: 3rem;
+}
+.timer-container__countdown{
+  height: 15%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0 3rem;
+  padding-top: 0.4rem;
+  margin: 0;
+  border-radius: 3rem;
+  font-size: 3rem;
+}
+.input{
+  appearance: none;
+  margin: 0;
+  font-size: 3rem;
+  background-color:  transparent;
+  text-align: center;
+  border-style: none;
+  color: lightgrey;
+  apperance: none;
+  cursor: pointer;
+  outline: none;
+}
+span{
+  cursor: context-menu ;
+}
+.timer-event__buttons{
+  margin-top: 3rem;
+  border-radius: 9rem;
+
+}
+.start{
+  font-weight:200;
+  font: 2vmax/1 "bungee";
+  font-size: 2.5rem;
+  padding: 1.5rem 0.3rem;
+  border-radius: 10rem;
+  color: black;
+  background-color: rgba(30,215,96,0.7);
+  line-height: 1.1;
+  cursor: pointer;
+  border: 3px solid rgba(128, 128, 128, 0.5);
+}
+.start:hover{
+  box-shadow: 2px 2px 4px black;
+}
+.stop{
+  font-weight:200;
+  font: 2vmax/1 "bungee";
+  font-size: 2.5rem;
+  padding: 1.5rem 0.3rem;
+  border-radius: 10rem;
+  color: black;
+  background-color: rgba(255,165,0,0.7);
+  line-height: 1.1;
+  cursor: pointer;
+  border: 3px solid rgba(128, 128, 128, 0.5);
+}
+.stop:hover{
+  box-shadow: 2px 2px 4px black;
+}
+.hidden{
+  display: none;
+}
