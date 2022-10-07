@@ -13,7 +13,6 @@ body {
   background-attachment: fixed;
   padding: 0;
   margin: 0;
-  /* animation: fadeIn ease 5s; */
 }
 
 main {
@@ -35,20 +34,6 @@ main {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 time {
@@ -81,17 +66,18 @@ time {
   font-family: 'caveat', cursive;
   position: absolute;
   width: 100vw;
-  bottom: 10px;
+  bottom: 20px;
 }
 
 q{
     font-size: 1.5em;  
 }
+
 q,
 cite {
   color: white;
   margin: 0 auto;
-  text-shadow: 5px 2px 5px #000;
+  text-shadow: 3px 2px 5px #000;
   display: block;
   text-align: center;
   width: 75vw;
@@ -99,7 +85,7 @@ cite {
 
 cite {
   margin-top: 10px;
-  font-size: 0.75em;
+  font-size: 1em;
 }
 
 @media screen and (max-width: 650px) {
@@ -107,9 +93,12 @@ cite {
     font-size: 3vmax;
   }
 
-  time,
-  .ampm {
+  time{
     font-size: 2rem;
+  }
+  .ampm{
+    font-size: 1rem;
+    margin-left: 1.2ch;
   }
 
   body {
