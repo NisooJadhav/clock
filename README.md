@@ -21,7 +21,8 @@ Digital Clock made using simple JavaScript and setting background images randoml
 ### - Show your love 💛 give us a star 🌟
 ### - Contribute to this [project](https://github.com/NisooJadhav/clock/blob/main/CONTRIBUTING.md).
 
-## Contributors
+The project wouldn't be possible without these awesome Contributors:
+
 <a href="https://github.com/nisoojadhav/clock/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=nisoojadhav/clock" />
 </a>
