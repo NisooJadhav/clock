@@ -44,7 +44,7 @@ main {
 time {
   display: inline-block;
   font-size: 4rem;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255) !important;
   z-index: 5;
   flex-grow: 1;
   margin: auto 0;
