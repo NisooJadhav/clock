@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: indigo;
+            display: flex;
+            flex-direction: column;
+            font: 2vmax/1 "bungee";
+            overflow: hidden;
+        }
+
+        .timer-button {
+            margin-top: 0.6rem;
+            font-size: 0.8rem;
+            border-style: none;
+            border-radius: 2rem;
+            font: 2vmax/1 "bungee";
+        }
+
+        .timer-button:hover {
+            cursor: pointer;
+            box-shadow: 1px 1px 1px grey;
+        }
+
+        #container {
+            position: relative;
+            margin: 8em auto;
+            height: 20rem;
+            width: 20rem;
+            background-image: url('background.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        #hour {
+            position: absolute;
+            background-color: black;
+            height: 20%;
+            width: 2%;
+            border-radius: 0.7em;
+            top: 30%;
+            left: 49%;
+            transform-origin: bottom;
+        }
+
+        #min {
+            position: absolute;
+            background-color: grey;
+            height: 30%;
+            width: 2%;
+            border-radius: 0.7em;
+            top: 20%;
+            left: 49%;
+            transform-origin: bottom;
+        }
+
+        #sec {
+            position: absolute;
+            background-color: rgb(177, 82, 98);
+            height: 35%;
+            width: 0.5%;
+            border-radius: 0.7em;
+            top: 15%;
+            left: 49.5%;
+            transform-origin: bottom;
+        }
+    </style>
+    <title>Clock</title>
+</head>
+
+<body>
+    <a class="timer-button" href="index.html" style="text-decoration: none; color: #000; background-color: aliceblue; padding: 2px; margin: 0 auto;">BACK</a>
+    <div id='container'>
+        <div id='hour'></div>
+        <div id='min'></div>
+        <div id='sec'></div>
+    </div>
+</body>
+<script>
+    setInterval(() => {
+        let d = new Date();
+        let h = d.getHours();
+        let mn = d.getMinutes();
+        let sc = d.getSeconds();
+
+        hrotation = (30 * h) + (mn / 2);
+        mrotation = 6 * mn;
+        srotation = 6 * sc;
+
+        hour.style.transform = `rotate(${hrotation}deg)`;
+        min.style.transform = `rotate(${mrotation}deg)`;
+        sec.style.transform = `rotate(${srotation}deg)`;
+
+    }, 1000);
+</script>
+
+</html>
