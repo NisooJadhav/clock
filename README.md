@@ -26,3 +26,8 @@ The project wouldn't be possible without these awesome Contributors:
 <a href="https://github.com/nisoojadhav/clock/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=nisoojadhav/clock" />
 </a>
+
+------
+
+**Credits:**
+<a target="_blank" href="https://icons8.com/icon/21458/alarm-clock">Alarm Clock</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
