@@ -31,11 +31,15 @@ main {
 .clock {
   padding: 1.25rem;
   align-self: center;
-  background: rgba(0, 0, 0, 0.6);
   border-radius: 5rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+  background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+  animation: bg 10s linear infinite;
+  opacity: 0.8;
+  background-size: 600%;
+  user-select: none;
 }
 time {
   display: inline-block;
@@ -58,7 +62,7 @@ time {
   margin-left: 1.7ch;
 }
 time {
-  width: 6ch;
+  width: 6.5ch;
 }
 .quote {
   font-family: "caveat", cursive;
@@ -211,7 +215,21 @@ span {
 .hidden {
   display: none;
 }
-
+.font-effect-anaglyph{
+  letter-spacing: 8px;
+}
+/* Animation Keyframes CSS  */
+@keyframes bg {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
 /* MEDIA QUERIES */
 @media screen and (max-width: 650px) {
   html {
