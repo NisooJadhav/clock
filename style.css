@@ -9,6 +9,7 @@ body {
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: fixed;
   background-attachment: fixed;
   padding: 0;
   margin: 0;
@@ -261,7 +262,7 @@ span {
   .start {
     font-size: 25px;
   }
-  .input{
+  .input {
     font-size: 2rem;
   }
 }
