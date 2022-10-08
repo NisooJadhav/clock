@@ -19,9 +19,13 @@
 
   <body>
     <div class="timer-clock__button">
-      <button class="timer-button">Timer</button>
-      <a class="timer-button" href="analog.html" style="text-decoration: none; color: #000; background-color: aliceblue; padding: 2px; margin-left: 5px;">Analog</a>
-      <button class="clock-button hidden">Clock</button>
+      <button class="timer-button" style="margin-right: 10px">Timer</button>
+      <button class="clock-button hidden" style="margin-right: 10px">
+        Clock
+      </button>
+      <button class="timer-button">
+        <a href="analog.html">Analog</a>
+      </button>
     </div>
     <main>
       <div class="clock">
@@ -57,7 +61,7 @@
             <option>23</option>
           </select>
           <span class="displayhour">hours</span>
-          <select name="minutes" class="input-min  input">
+          <select name="minutes" class="input-min input">
             <option value="0">0</option>
             <option>1</option>
             <option>2</option>
