@@ -35,9 +35,8 @@ main {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+  background: linear-gradient(-45deg, #FFA63D99, #FF3D7799, #338AFF99, #3CF0C599);
   animation: bg 10s linear infinite;
-  opacity: 0.8;
   background-size: 600%;
   user-select: none;
 }
