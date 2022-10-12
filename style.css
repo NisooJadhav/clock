@@ -35,7 +35,13 @@ main {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  background: linear-gradient(-45deg, #FFA63D99, #FF3D7799, #338AFF99, #3CF0C599);
+  background: linear-gradient(
+    -45deg,
+    #ffa63d99,
+    #ff3d7799,
+    #338aff99,
+    #3cf0c599
+  );
   animation: bg 10s linear infinite;
   background-size: 600%;
   user-select: none;
@@ -96,7 +102,7 @@ cite {
   justify-content: center;
 }
 .timer-button {
-  background: #fff;
+  background: #ffffff99;
   margin-top: 0.6rem;
   font-size: 0.8rem;
   border-style: none;
@@ -105,7 +111,7 @@ cite {
   width: 110px;
 }
 .clock-button {
-  background: #fff;
+  background: #ffffff99;
   margin-top: 0.6rem;
   font-size: 0.8rem;
   border-style: none;
@@ -115,6 +121,7 @@ cite {
 }
 .timer-button:hover,
 .clock-button:hover {
+  background: #fff;
   cursor: pointer;
   box-shadow: 1px 1px 10px #00000080;
   border-radius: 0.25rem;
@@ -122,7 +129,7 @@ cite {
 }
 .timer-button:not(hover),
 .clock-button:not(hover) {
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .hidden {
   display: none;
@@ -217,21 +224,23 @@ span {
 .hidden {
   display: none;
 }
-.font-effect-anaglyph{
+.font-effect-anaglyph {
   letter-spacing: 8px;
 }
+
 /* Animation Keyframes CSS  */
 @keyframes bg {
-  0%{
+  0% {
     background-position: 0% 50%;
   }
-  50%{
+  50% {
     background-position: 100% 50%;
   }
-  100%{
+  100% {
     background-position: 0% 50%;
   }
 }
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 650px) {
   html {
@@ -239,10 +248,11 @@ span {
   }
   time {
     font-size: 2rem;
+    margin-right: 1ch;
   }
   .ampm {
-    font-size: 1rem;
-    margin-left: 1.2ch;
+    font-size: .8rem;
+    margin-left: 2ch;
   }
   body {
     display: flex;

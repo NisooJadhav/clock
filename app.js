@@ -1,5 +1,5 @@
 const randomRng = Math.floor(Math.random() * 1000) + 0;
-document.body.style.cssText = `background: url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
+document.body.style.cssText = `background: linear-gradient(to bottom, #00000050,transparent,#00000099),url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
 
 // bgSwitch(bgImg), 1000;
 
