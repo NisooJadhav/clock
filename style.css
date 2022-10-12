@@ -40,6 +40,9 @@ main {
   background-size: 600%;
   user-select: none;
 }
+.clock:hover {
+  cursor: pointer;
+}
 time {
   display: inline-block;
   font-size: 4rem;

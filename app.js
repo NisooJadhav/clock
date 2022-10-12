@@ -4,21 +4,27 @@ document.body.style.cssText = `background: url(https://picsum.photos/seed/${rand
 // bgSwitch(bgImg), 1000;
 
 //CLOCK
+let is24h = false;
 function clock() {
   const d = new Date();
   let h = d.getHours().toString().padStart(2, "0");
   let m = d.getMinutes().toString().padStart(2, "0");
   let s = d.getSeconds().toString().padStart(2, "0");
-  let session = "PM";
-  if (h >= 12) {
-    h = (h - 12).toString().padStart(2, "0");
-    session = "PM";
-  } else {
-    session = "AM";
+  let session = "";
+  if (!is24h) {
+    if (h >= 12) {
+      h = (h - 12).toString().padStart(2, "0");
+      session = "PM";
+    } else {
+      session = "AM";
+    }
   }
   document.querySelector("time").innerHTML = h + ":" + m + ":" + s;
   document.querySelector(".ampm").innerHTML = session;
 }
+document.querySelector(".clock").addEventListener("click", function () {
+  is24h = !is24h;
+});
 setInterval(clock, 1000);
 
 // Quotes
