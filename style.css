@@ -103,17 +103,17 @@ cite {
   bottom: 80px;
   text-align: center;
   margin: 0 auto;
-  font-size: 35px;
+  font-size: 27px;
   margin-top: 10px;
 }
 .news-hub {
   font-family: poppins;
   width: 100vw;
-  bottom: 130px;
+  bottom: 135px;
   position: absolute;
   color: red;
   text-align: center;
-  font-size: 35px;
+  font-size: 32px;
 }
 .timer-clock__button {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,

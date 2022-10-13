@@ -56,14 +56,14 @@ const newsHub = document.querySelector(".news-hub");
 const getNews = async function () {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${API_KEY}`
+      `https://newsdata.io/api/1/news?apikey=${API_KEY}&language=en`
     );
 
     const data = await res.json();
     console.log(data);
     const random = Math.round(Math.random() * 9);
     if (res.ok) {
-      news.innerText = data.articles[random].title;
+      news.innerText = data.results[random].title;
     }
   } catch (err) {
     news.textContent = `Failure retrieving news data 💥`;
