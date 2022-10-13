@@ -45,7 +45,6 @@ main {
   animation: bg 10s linear infinite;
   background-size: 600%;
   user-select: none;
-  margin-bottom: 400px;
 }
 .clock:hover {
   cursor: pointer;
@@ -77,7 +76,7 @@ time {
   font-family: "caveat", cursive;
   position: absolute;
   width: 100vw;
-  bottom: 200px;
+  bottom: 20px;
 }
 q {
   font-size: 1.5em;
@@ -94,26 +93,6 @@ cite {
 cite {
   margin-top: 10px;
   font-size: 1em;
-}
-.news {
-  font-family: poppins;
-  position: absolute;
-  width: 100vw;
-  color: white;
-  bottom: 80px;
-  text-align: center;
-  margin: 0 auto;
-  font-size: 35px;
-  margin-top: 10px;
-}
-.news-hub {
-  font-family: poppins;
-  width: 100vw;
-  bottom: 130px;
-  position: absolute;
-  color: red;
-  text-align: center;
-  font-size: 35px;
 }
 .timer-clock__button {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -141,7 +120,8 @@ cite {
   width: 110px;
 }
 .timer-button:hover,
-.clock-button:hover {
+.clock-button:hover,
+.input-type:hover {
   background: #fff;
   cursor: pointer;
   box-shadow: 1px 1px 10px #00000080;
@@ -163,6 +143,16 @@ cite {
   height: 100vh;
   flex-direction: column;
   width: 80%;
+}
+.input-type {
+  background: #ffffff99;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  border-style: none;
+  border-radius: 2rem;
+  padding: 0.3rem;
+  width: 110px;
+  margin-left: 10px;
 }
 .timer-container {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
