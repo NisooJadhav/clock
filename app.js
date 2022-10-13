@@ -1,5 +1,10 @@
+const inputType = document.querySelector(".input-type");
 const randomRng = Math.floor(Math.random() * 1000) + 0;
+
 document.body.style.cssText = `background: linear-gradient(to bottom, #00000050,transparent,#00000099),url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
+document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundSize = "cover";
+document.body.style.backgroundAttachment = "fixed";
 
 // bgSwitch(bgImg), 1000;
 
@@ -19,8 +24,8 @@ function clock() {
       session = "AM";
     }
   }
-  document.querySelector("time").innerHTML = h + ":" + m + ":" + s + session;
-  // document.querySelector(".ampm").innerHTML = session;
+  document.querySelector("time").innerHTML = h + ":" + m + ":" + s;
+  document.querySelector(".ampm").innerHTML = session;
 }
 document.querySelector(".clock").addEventListener("click", function () {
   is24h = !is24h;
@@ -61,10 +66,12 @@ btnTimer.addEventListener("click", function () {
   divClock.classList.add("hidden");
   divQuote.classList.add("hidden");
   divTimerDisplay.classList.remove("hidden");
+  document.body.style.backgroundImage = "url(timer.jpg)";
   btnClock.classList.remove("hidden");
   btnTimer.classList.add("hidden");
 });
 btnClock.addEventListener("click", function () {
+  document.body.style.cssText = `background: linear-gradient(to bottom, #00000050,transparent,#00000099),url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
   divClock.classList.remove("hidden");
   divQuote.classList.remove("hidden");
   divTimerDisplay.classList.add("hidden");
@@ -151,4 +158,10 @@ btnStop.addEventListener("click", function () {
   btnStart.classList.remove("hidden");
   timerContainerCountdown.classList.add("hidden");
   timerContainer.classList.remove("hidden");
+});
+
+inputType.addEventListener("change", function (e) {
+  if (inputType.value === "analog") {
+    window.open("analog.html");
+  }
 });
