@@ -1,3 +1,5 @@
+import { API_KEY } from "./config";
+
 const randomRng = Math.floor(Math.random() * 1000) + 0;
 document.body.style.cssText = `background: linear-gradient(to bottom, #00000050,transparent,#00000099),url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
 
@@ -54,7 +56,7 @@ const newsHub = document.querySelector(".news-hub");
 const getNews = async function () {
   try {
     const res = await fetch(
-      "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=a37e6b81ee584f4bae42ef06062e532b"
+      `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${API_KEY}`
     );
 
     const data = await res.json();
