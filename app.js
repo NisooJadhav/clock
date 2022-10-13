@@ -1,4 +1,4 @@
-import { API_KEY } from "./config.js";
+const inputType = document.querySelector(".input-type");
 
 const randomRng = Math.floor(Math.random() * 1000) + 0;
 document.body.style.cssText = `background: linear-gradient(to bottom, #00000050,transparent,#00000099),url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
@@ -49,24 +49,22 @@ async function updateQuote() {
   }
 }
 
-//https://newsapi.org/v2/everything?q=keyword&apiKey=API_KEY
+//https://newsapi.org/v2/everything?q=keyword&apiKey=a37e6b81ee584f4bae42ef06062e532b
 const news = document.querySelector(".news");
 const newsHub = document.querySelector(".news-hub");
-
 const getNews = async function () {
   try {
     const res = await fetch(
-      `https://newsdata.io/api/1/news?apikey=${API_KEY}&language=en`
+      `https://newsdata.io/api/1/news?apikey=pub_12254eb9a3c9b6dd2d17dd3b402e6dec8d4fb&language=en`
     );
-
     const data = await res.json();
     console.log(data);
     const random = Math.round(Math.random() * 9);
     if (res.ok) {
-      news.innerText = data.results[random].title;
+      news.textContent = data.results[random].title;
     }
   } catch (err) {
-    news.textContent = `Failure retrieving news data 💥`;
+    news.textContent = `Failure retrieving news data`;
   }
 };
 getNews();
@@ -85,12 +83,14 @@ btnTimer.addEventListener("click", function () {
   divClock.classList.add("hidden");
   divQuote.classList.add("hidden");
   divTimerDisplay.classList.remove("hidden");
+  document.body.style.backgroundImage = "url(timer.jpg)";
   btnClock.classList.remove("hidden");
   btnTimer.classList.add("hidden");
   news.classList.add("hidden");
   newsHub.classList.add("hidden");
 });
 btnClock.addEventListener("click", function () {
+  document.body.style.cssText = `background: linear-gradient(to bottom, #00000050,transparent,#00000099),url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
   divClock.classList.remove("hidden");
   divQuote.classList.remove("hidden");
   divTimerDisplay.classList.add("hidden");
@@ -179,4 +179,10 @@ btnStop.addEventListener("click", function () {
   btnStart.classList.remove("hidden");
   timerContainerCountdown.classList.add("hidden");
   timerContainer.classList.remove("hidden");
+});
+
+inputType.addEventListener("change", function (e) {
+  if (inputType.value === "analog") {
+    window.open("analog.html");
+  }
 });
