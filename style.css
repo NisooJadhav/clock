@@ -121,8 +121,7 @@ cite {
   width: 110px;
 }
 .timer-button:hover,
-.clock-button:hover,
-.input-type:hover {
+.clock-button:hover {
   background: #fff;
   cursor: pointer;
   box-shadow: 1px 1px 10px #00000080;
@@ -144,16 +143,6 @@ cite {
   height: 100vh;
   flex-direction: column;
   width: 80%;
-}
-.input-type {
-  background: #ffffff99;
-  margin-top: 0.6rem;
-  font-size: 0.8rem;
-  border-style: none;
-  border-radius: 2rem;
-  padding: 0.3rem;
-  width: 110px;
-  margin-left: 10px;
 }
 .timer-container {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -263,7 +252,7 @@ span {
     margin-right: 1ch;
   }
   .ampm {
-    font-size: 0.8rem;
+    font-size: .8rem;
     margin-left: 2ch;
   }
   body {
