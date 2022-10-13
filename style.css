@@ -2,18 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
 
 html {
-  /* font: 2vmax/1 "bungee"; */
-  font-family: 'Orbitron', sans-serif;
+  font: 2vmax/1 "bungee";
+  padding: 0 !important;
+  margin: 0 !important;
 }
 body {
-  /* z-index: -1; */
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: fixed;
-  background-attachment: fixed;
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 a {
   text-decoration: none;
@@ -30,9 +25,9 @@ main {
   flex-wrap: wrap;
 }
 .clock {
-  padding: 2rem;
+  padding: 1.25rem;
   align-self: center;
-  /* border-radius: 5rem; */
+  border-radius: 5rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
@@ -44,7 +39,7 @@ main {
     #3cf0c599
   );
   animation: bg 10s linear infinite;
-  background-size: 15%;
+  background-size: 600%;
   user-select: none;
 }
 .clock:hover {
@@ -57,7 +52,7 @@ time {
   z-index: 5;
   flex-grow: 1;
   margin: auto 0;
-  margin-right: 145px;
+  margin-right: 0;
 }
 .ampm {
   display: inline-block;
@@ -103,7 +98,7 @@ cite {
   justify-content: center;
 }
 .timer-button {
-  background: #ffffff99;
+  background: #fff;
   margin-top: 0.6rem;
   font-size: 0.8rem;
   border-style: none;
@@ -112,7 +107,7 @@ cite {
   width: 110px;
 }
 .clock-button {
-  background: #ffffff99;
+  background: #fff;
   margin-top: 0.6rem;
   font-size: 0.8rem;
   border-style: none;
@@ -122,7 +117,6 @@ cite {
 }
 .timer-button:hover,
 .clock-button:hover {
-  background: #fff;
   cursor: pointer;
   box-shadow: 1px 1px 10px #00000080;
   border-radius: 0.25rem;
@@ -130,7 +124,7 @@ cite {
 }
 .timer-button:not(hover),
 .clock-button:not(hover) {
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .hidden {
   display: none;
@@ -228,7 +222,6 @@ span {
 .font-effect-anaglyph {
   letter-spacing: 8px;
 }
-
 /* Animation Keyframes CSS  */
 @keyframes bg {
   0% {
@@ -241,7 +234,6 @@ span {
     background-position: 0% 50%;
   }
 }
-
 /* MEDIA QUERIES */
 @media screen and (max-width: 650px) {
   html {
@@ -249,11 +241,10 @@ span {
   }
   time {
     font-size: 2rem;
-    margin-right: 1ch;
   }
   .ampm {
-    font-size: .8rem;
-    margin-left: 2ch;
+    font-size: 1rem;
+    margin-left: 1.2ch;
   }
   body {
     display: flex;
