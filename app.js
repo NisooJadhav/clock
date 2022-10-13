@@ -21,8 +21,8 @@ function clock() {
       session = "AM";
     }
   }
-  document.querySelector("time").innerHTML = h + ":" + m + ":" + s;
-  document.querySelector(".ampm").innerHTML = session;
+  document.querySelector("time").innerHTML = h + ":" + m + ":" + s + session;
+  // document.querySelector(".ampm").innerHTML = session;
 }
 document.querySelector(".clock").addEventListener("click", function () {
   is24h = !is24h;
