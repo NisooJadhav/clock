@@ -49,7 +49,6 @@ async function updateQuote() {
   }
 }
 
-//https://newsapi.org/v2/everything?q=keyword&apiKey=a37e6b81ee584f4bae42ef06062e532b
 const news = document.querySelector(".news");
 const newsHub = document.querySelector(".news-hub");
 const getNews = async function () {
