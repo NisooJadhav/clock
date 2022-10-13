@@ -1,5 +1,3 @@
-const inputType = document.querySelector(".input-type");
-
 const randomRng = Math.floor(Math.random() * 1000) + 0;
 document.body.style.cssText = `background: linear-gradient(to bottom, #00000050,transparent,#00000099),url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
 
@@ -49,6 +47,28 @@ async function updateQuote() {
   }
 }
 
+//https://newsapi.org/v2/everything?q=keyword&apiKey=a37e6b81ee584f4bae42ef06062e532b
+const news = document.querySelector(".news");
+const newsHub = document.querySelector(".news-hub");
+
+const getNews = async function () {
+  try {
+    const res = await fetch(
+      "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=a37e6b81ee584f4bae42ef06062e532b"
+    );
+
+    const data = await res.json();
+    console.log(data);
+    const random = Math.round(Math.random() * 9);
+    if (res.ok) {
+      news.innerText = data.articles[random].title;
+    }
+  } catch (err) {
+    news.textContent = `Failure retrieving news data 💥`;
+  }
+};
+getNews();
+
 // Timer
 const btnTimer = document.querySelector(".timer-button");
 const btnClock = document.querySelector(".clock-button");
@@ -63,17 +83,19 @@ btnTimer.addEventListener("click", function () {
   divClock.classList.add("hidden");
   divQuote.classList.add("hidden");
   divTimerDisplay.classList.remove("hidden");
-  document.body.style.backgroundImage = "url(timer.jpg)";
   btnClock.classList.remove("hidden");
   btnTimer.classList.add("hidden");
+  news.classList.add("hidden");
+  newsHub.classList.add("hidden");
 });
 btnClock.addEventListener("click", function () {
-  document.body.style.cssText = `background: linear-gradient(to bottom, #00000050,transparent,#00000099),url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
   divClock.classList.remove("hidden");
   divQuote.classList.remove("hidden");
   divTimerDisplay.classList.add("hidden");
   btnClock.classList.add("hidden");
   btnTimer.classList.remove("hidden");
+  news.classList.remove("hidden");
+  newsHub.classList.remove("hidden");
 });
 
 let inputHour = 0;
@@ -155,10 +177,4 @@ btnStop.addEventListener("click", function () {
   btnStart.classList.remove("hidden");
   timerContainerCountdown.classList.add("hidden");
   timerContainer.classList.remove("hidden");
-});
-
-inputType.addEventListener("change", function (e) {
-  if (inputType.value === "analog") {
-    window.open("analog.html");
-  }
 });
