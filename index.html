@@ -15,6 +15,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Rancho&effect=anaglyph"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+
+    <script type="module" defer src="app.js"></script>
   </head>
 
   <body>
@@ -23,10 +29,9 @@
       <button class="clock-button hidden" style="margin-right: 10px">
         Clock
       </button>
-      <select class="input-type">
-        <option value="digital">Digital</option>
-        <option value="analog">Analog</option>
-      </select>
+      <button class="timer-button">
+        <a href="analog.html">Analog</a>
+      </button>
     </div>
     <main>
       <div class="clock">
@@ -203,6 +208,9 @@
       <cite></cite>
     </div>
 
-    <script src="app.js"></script>
+    <div>
+      <b class="news-hub">NEWS LIVE</b>
+      <p class="news">Retrieving news...</p>
+    </div>
   </body>
 </html>
