@@ -1,7 +1,8 @@
-import { API_KEY } from "./config.js";
-
 const randomRng = Math.floor(Math.random() * 1000) + 0;
-document.body.style.cssText = `background: linear-gradient(to bottom, #00000050,transparent,#00000099),url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
+document.body.style.cssText = `background: url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
+document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundSize = "cover";
+document.body.style.backgroundAttachment = "fixed"; 
 
 // bgSwitch(bgImg), 1000;
 
@@ -49,39 +50,6 @@ async function updateQuote() {
   }
 }
 
-const news = document.querySelector(".news");
-const newsHub = document.querySelector(".news-hub");
-const getNews = async function () {
-  try {
-    const res = await fetch(
-      `https://newsdata.io/api/1/news?apikey=pub_12254eb9a3c9b6dd2d17dd3b402e6dec8d4fb&language=en`
-    );
-
-const news = document.querySelector(".news");
-const newsHub = document.querySelector(".news-hub");
-
-const getNews = async function () {
-  try {
-    const res = await fetch(
-      `https://newsdata.io/api/1/news?apikey=${API_KEY}&language=en`
-    );
-
-    const data = await res.json();
-    console.log(data);
-    const random = Math.round(Math.random() * 9);
-    if (res.ok) {
-      news.textContent = data.results[random].title;
-    }
-  } catch (err) {
-      news.textContent = `Failure retrieving news data`;
-      news.innerText = data.results[random].title;
-    }
-  } catch (err) {
-    news.textContent = `Failure retrieving news data 💥`;
-  }
-};
-getNews();
-
 // Timer
 const btnTimer = document.querySelector(".timer-button");
 const btnClock = document.querySelector(".clock-button");
@@ -98,8 +66,6 @@ btnTimer.addEventListener("click", function () {
   divTimerDisplay.classList.remove("hidden");
   btnClock.classList.remove("hidden");
   btnTimer.classList.add("hidden");
-  news.classList.add("hidden");
-  newsHub.classList.add("hidden");
 });
 btnClock.addEventListener("click", function () {
   divClock.classList.remove("hidden");
@@ -107,8 +73,6 @@ btnClock.addEventListener("click", function () {
   divTimerDisplay.classList.add("hidden");
   btnClock.classList.add("hidden");
   btnTimer.classList.remove("hidden");
-  news.classList.remove("hidden");
-  newsHub.classList.remove("hidden");
 });
 
 let inputHour = 0;
