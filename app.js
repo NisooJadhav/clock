@@ -58,7 +58,7 @@ const getNews = async function () {
     );
     const data = await res.json();
     console.log(data);
-    const random = Math.round(Math.random() * 9);
+    const random = Math.round(Math.random() * 99);
     if (res.ok) {
       news.textContent = data.articles[random].title;
     }
