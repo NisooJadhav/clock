@@ -226,3 +226,8 @@ document.querySelector(".reload").addEventListener("click", function () {
   getQuote();
   getJoke();
 });
+
+// GitHub Repo Redirect
+document.querySelector(".github").addEventListener("click", function () {
+  location.href = "https://github.com/nisoojadhav/clock";
+});

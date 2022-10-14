@@ -39,6 +39,26 @@ svg:not(:hover) {
   transform: rotate(0deg);
   transition: 0.5s;
 }
+.github {
+  height: auto;
+  width: 2%;
+  position: fixed;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #00000025;
+  border-radius: 50%;
+  bottom: 0;
+  z-index: 3;
+  background: #fff;
+  margin: 10px 10px;
+  margin-left: 95vw;
+  margin-right: 5vw;
+  fill: #000;
+  opacity: 0.5;
+}
+.github:hover {
+  transform: rotate(0);
+  opacity: 1;
+}
 main {
   display: flex;
   justify-content: center;
