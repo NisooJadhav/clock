@@ -1,8 +1,8 @@
 const randomRng = Math.floor(Math.random() * 1000) + 0;
-document.body.style.cssText = `background: linear-gradient(to bottom, #00000099, transparent, #00000099),url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
+document.body.style.cssText = `background: linear-gradient(to bottom, #00000099, #00000099),url(https://picsum.photos/seed/${randomRng}/1920/1080)`;
 document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundSize = "cover";
-document.body.style.backgroundAttachment = "fixed"; 
+document.body.style.backgroundAttachment = "fixed";
 
 // bgSwitch(bgImg), 1000;
 
@@ -51,18 +51,39 @@ async function updateQuote() {
 }
 
 const news = document.querySelector(".news");
-const newsHub = document.querySelector(".news-hub");
-const getNews = async function () {
+function randomInt(min, max) {
+  // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+let ran1 = randomInt(1, 100);
+
+const getNews = async () => {
   try {
-    const res = await fetch(
-      `https://saurav.tech/NewsAPI/everything/cnn.json`
-    );
-    const data = await res.json();
-    console.log(data);
-    const random = Math.round(Math.random() * 99);
-    if (res.ok) {
-      news.textContent = data.articles[random].title;
-    }
+    fetch(`https://saurav.tech/NewsAPI/everything/cnn.json`)
+      .then((e) => e.json())
+      .then((response) => {
+        for (let i = ran1; i < ran1 + 10; i++) {
+          document.querySelector(".news-box").innerHTML +=
+            "<img src=" +
+            response.articles[i].urlToImage +
+            " />" +
+            "<h1>" +
+            response.articles[i].title +
+            "</h1>" +
+            "<a href=" +
+            response.articles[i].url +
+            " target='_blank'>read full news here: " +
+            "<b>" +
+            response.articles[i].author +
+            " </b>" +
+            "</a>" +
+            "<p>" +
+            response.articles[i].description +
+            "</p>"+
+            "<hr>";
+        }
+      });
   } catch (err) {
     news.textContent = `Failure retrieving news data`;
   }
