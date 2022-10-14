@@ -50,6 +50,25 @@ async function updateQuote() {
   }
 }
 
+const news = document.querySelector(".news");
+const newsHub = document.querySelector(".news-hub");
+const getNews = async function () {
+  try {
+    const res = await fetch(
+      `https://saurav.tech/NewsAPI/everything/cnn.json`
+    );
+    const data = await res.json();
+    console.log(data);
+    const random = Math.round(Math.random() * 99);
+    if (res.ok) {
+      news.textContent = data.articles[random].title;
+    }
+  } catch (err) {
+    news.textContent = `Failure retrieving news data`;
+  }
+};
+getNews();
+
 // Timer
 const btnTimer = document.querySelector(".timer-button");
 const btnClock = document.querySelector(".clock-button");
@@ -66,6 +85,8 @@ btnTimer.addEventListener("click", function () {
   divTimerDisplay.classList.remove("hidden");
   btnClock.classList.remove("hidden");
   btnTimer.classList.add("hidden");
+  news.classList.add("hidden");
+  newsHub.classList.add("hidden");
 });
 btnClock.addEventListener("click", function () {
   divClock.classList.remove("hidden");
@@ -73,6 +94,8 @@ btnClock.addEventListener("click", function () {
   divTimerDisplay.classList.add("hidden");
   btnClock.classList.add("hidden");
   btnTimer.classList.remove("hidden");
+  news.classList.remove("hidden");
+  newsHub.classList.remove("hidden");
 });
 
 let inputHour = 0;
