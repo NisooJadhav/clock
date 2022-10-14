@@ -54,13 +54,13 @@ const newsHub = document.querySelector(".news-hub");
 const getNews = async function () {
   try {
     const res = await fetch(
-      `https://newsdata.io/api/1/news?apikey=&language=en`
+      `https://saurav.tech/NewsAPI/everything/cnn.json`
     );
     const data = await res.json();
     console.log(data);
     const random = Math.round(Math.random() * 9);
     if (res.ok) {
-      news.textContent = data.results[random].title;
+      news.textContent = data.articles[random].title;
     }
   } catch (err) {
     news.textContent = `Failure retrieving news data`;
