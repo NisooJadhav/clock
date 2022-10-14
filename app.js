@@ -49,7 +49,14 @@ async function updateQuote() {
   }
 }
 
-//https://newsapi.org/v2/everything?q=keyword&apiKey=API_KEY
+const news = document.querySelector(".news");
+const newsHub = document.querySelector(".news-hub");
+const getNews = async function () {
+  try {
+    const res = await fetch(
+      `https://newsdata.io/api/1/news?apikey=pub_12254eb9a3c9b6dd2d17dd3b402e6dec8d4fb&language=en`
+    );
+
 const news = document.querySelector(".news");
 const newsHub = document.querySelector(".news-hub");
 
@@ -63,6 +70,10 @@ const getNews = async function () {
     console.log(data);
     const random = Math.round(Math.random() * 9);
     if (res.ok) {
+      news.textContent = data.results[random].title;
+    }
+  } catch (err) {
+      news.textContent = `Failure retrieving news data`;
       news.innerText = data.results[random].title;
     }
   } catch (err) {
