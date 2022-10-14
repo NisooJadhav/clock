@@ -4,9 +4,7 @@ document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundSize = "cover";
 document.body.style.backgroundAttachment = "fixed";
 
-// bgSwitch(bgImg), 1000;
-
-//CLOCK
+// CLOCK
 let is24h = false;
 function clock() {
   const d = new Date();
@@ -30,14 +28,14 @@ document.querySelector(".clock").addEventListener("click", function () {
 });
 setInterval(clock, 1000);
 
-// Quotes
+// QUOTE
 const quote = document.querySelector("q");
 const cite = document.querySelector("cite");
 
-updateQuote();
+getQuote();
 
 // API -> https://github.com/lukePeavey/quotable
-async function updateQuote() {
+async function getQuote() {
   const response = await fetch("https://api.quotable.io/random");
   const data = await response.json();
   if (response.ok) {
@@ -50,47 +48,70 @@ async function updateQuote() {
   }
 }
 
-const news = document.querySelector(".news");
-function randomInt(min, max) {
-  // min and max included
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-let ran1 = randomInt(1, 100);
-
-const getNews = async () => {
+// JOKE
+const url = "https://icanhazdadjoke.com/";
+const joke = document.querySelector(".joke");
+const getJoke = async () => {
+  joke.innerText = "loading...";
   try {
-    fetch(`https://saurav.tech/NewsAPI/everything/cnn.json`)
-      .then((e) => e.json())
-      .then((response) => {
-        for (let i = ran1; i < ran1 + 10; i++) {
-          document.querySelector(".news-box").innerHTML +=
-            "<img src=" +
-            response.articles[i].urlToImage +
-            " />" +
-            "<h1>" +
-            response.articles[i].title +
-            "</h1>" +
-            "<a href=" +
-            response.articles[i].url +
-            " target='_blank'>read full news here: " +
-            "<b>" +
-            response.articles[i].author +
-            " </b>" +
-            "</a>" +
-            "<p>" +
-            response.articles[i].description +
-            "</p>"+
-            "<hr>";
-        }
-      });
-  } catch (err) {
-    news.textContent = `Failure retrieving news data`;
+    const res = await fetch(url, {
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    if (!res.ok) {
+      throw new Error("error");
+    }
+    const data = await res.json();
+    joke.innerHTML = data.joke;
+  } catch (e) {
+    console.error(e.message);
+    joke.innerHTML = "error occured while fetching joke :(";
   }
 };
+getJoke();
+
+// NEWS
+const news = document.querySelector(".news");
 getNews();
 
-// Timer
+async function getNews() {
+  const response = await fetch(
+    "https://saurav.tech/NewsAPI/everything/cnn.json"
+  );
+  const data = await response.json();
+  if (response.ok) {
+    function randomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    let ran1 = randomInt(1, 90);
+    for (let i = ran1; i < ran1 + 10; i++) {
+      document.querySelector(".news-box").innerHTML +=
+        "<img src=" +
+        data.articles[i].urlToImage +
+        " />" +
+        "<h1>" +
+        data.articles[i].title +
+        "</h1>" +
+        "<a href=" +
+        data.articles[i].url +
+        " target='_blank'>read full news here: " +
+        "<b>" +
+        data.articles[i].author +
+        " </b>" +
+        "</a>" +
+        "<p>" +
+        data.articles[i].description +
+        "</p>" +
+        "<hr>";
+    }
+  } else {
+    news.textContent = "An error occured while fetching news :(";
+    console.log(data);
+  }
+}
+
+// TIMER
 const btnTimer = document.querySelector(".timer-button");
 const btnClock = document.querySelector(".clock-button");
 const divClock = document.querySelector(".clock");
@@ -198,4 +219,11 @@ btnStop.addEventListener("click", function () {
   btnStart.classList.remove("hidden");
   timerContainerCountdown.classList.add("hidden");
   timerContainer.classList.remove("hidden");
+});
+
+// RELOAD
+document.querySelector(".reload").addEventListener("click", function () {
+  getNews();
+  getQuote();
+  getJoke();
 });
