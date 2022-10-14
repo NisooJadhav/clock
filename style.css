@@ -20,7 +20,7 @@ main {
   /* align-items: center; */
   align-content: center;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 75vh;
   margin: 0 auto;
   flex-wrap: wrap;
 }
