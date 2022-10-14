@@ -223,7 +223,6 @@ btnStop.addEventListener("click", function () {
 
 // RELOAD
 document.querySelector(".reload").addEventListener("click", function () {
-  getNews();
   getQuote();
   getJoke();
 });
