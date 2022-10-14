@@ -20,7 +20,7 @@ Great and easy for beginners to learn hacktoberfest!
 - Top news from around the World (soon...)
 
 ------
-
+### - All icons are from: https://icons8.com/
 ### - Show your love 💛 give us a star 🌟
 ### - Contribute to this [project](https://github.com/NisooJadhav/clock/blob/main/CONTRIBUTING.md).
 
