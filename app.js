@@ -1,4 +1,3 @@
-document.body.style.cssText = `background: linear-gradient(to bottom, #00000099, transparent, #00000099)`;
 document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundSize = "cover";
 document.body.style.backgroundAttachment = "fixed";
@@ -10,7 +9,7 @@ function getRandomRng() {
 getRandomImage(getRandomRng());
 
 function getRandomImage(randomRng) {
-  document.body.style.backgroundImage = `url('https://picsum.photos/seed/${randomRng}/1920/1080')`;
+  document.body.style.backgroundImage = `linear-gradient(to bottom, #00000099,#00000099),url('https://picsum.photos/seed/${randomRng}/1920/1080')`;
 }
 
 // CLOCK
@@ -34,10 +33,18 @@ function clock() {
 }
 document.querySelector(".clock").addEventListener("click", function () {
   is24h = !is24h;
-  // get random Image
   getRandomImage(getRandomRng());
 });
 setInterval(clock, 1000);
+
+// DATE
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, "0");
+var mm = today.toLocaleString("default", { month: "short" });
+var yyyy = today.getFullYear().toString().substr(-2);
+
+today = dd + " " + mm + " " + yyyy;
+document.querySelector(".day").innerHTML = today;
 
 // QUOTE
 const quote = document.querySelector("q");
@@ -246,7 +253,7 @@ function getFacts() {
         function count(obj) {
           return Object.keys(obj).length;
         }
-        
+
         let fact1 = randomInt(1, count(response) - 2);
         let fact2 = fact1 + 1;
         let fact3 = fact2 + 1;
