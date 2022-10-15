@@ -17,7 +17,7 @@ Great and easy for beginners to learn hacktoberfest!
 - Inspirational Quotes
 - Jokes to make your day!
 - Top news from around the World
-- Facts to enrich your knowledge (soon...)
+- Facts to enrich your knowledge
 
 ------
 ### - All icons are from: https://icons8.com/
