@@ -15,15 +15,15 @@ Great and easy for beginners to learn hacktoberfest!
 
 - Clock
 - Inspirational Quotes
-- Jokes to make your day! (soon...)
+- Jokes to make your day!
+- Top news from around the World
 - Facts to enrich your knowledge (soon...)
-- Top news from around the World (soon...)
 
 ------
 ### - All icons are from: https://icons8.com/
 ### - Show your love 💛 give us a star 🌟
 ### - Contribute to this [project](https://github.com/NisooJadhav/clock/blob/main/CONTRIBUTING.md).
-
+------
 <b>The project wouldn't be possible without these awesome people:</b>
 
 <a href="https://github.com/nisoojadhav/clock/graphs/contributors">
