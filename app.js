@@ -77,7 +77,7 @@ const getJoke = async () => {
     joke.innerHTML = data.joke;
   } catch (e) {
     console.error(e.message);
-    joke.innerHTML = "error occured while fetching joke :(";
+    joke.innerHTML = "an error occured while fetching joke :(";
   }
 };
 getJoke();
@@ -117,7 +117,7 @@ async function getNews() {
         "<hr>";
     }
   } else {
-    news.textContent = "An error occured while fetching news :(";
+    news.textContent = "an error occured while fetching news :(";
     console.log(data);
   }
 }
@@ -241,11 +241,16 @@ function getFacts() {
         return Math.floor(Math.random() * (max - min + 1) + min);
       }
       if (this.readyState == 4 && this.status == 200) {
-        let fact1 = randomInt(1, 48);
+        const response = JSON.parse(a.responseText);
+
+        function count(obj) {
+          return Object.keys(obj).length;
+        }
+        
+        let fact1 = randomInt(1, count(response) - 2);
         let fact2 = fact1 + 1;
         let fact3 = fact2 + 1;
-        const response = JSON.parse(a.responseText);
-        
+
         let facts = document.querySelector(".facts");
         document.querySelector(".facts").innerHTML += response[fact1];
         document.querySelector(".facts").innerHTML += "<br>";
