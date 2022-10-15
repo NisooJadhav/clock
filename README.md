@@ -24,7 +24,7 @@ Great and easy for beginners to learn hacktoberfest!
 ### - Show your love 💛 give us a star 🌟
 ### - Contribute to this [project](https://github.com/NisooJadhav/clock/blob/main/CONTRIBUTING.md).
 
-The project wouldn't be possible without these awesome Contributors:
+<b>The project wouldn't be possible without these awesome people:</b>
 
 <a href="https://github.com/nisoojadhav/clock/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=nisoojadhav/clock" />
