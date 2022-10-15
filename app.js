@@ -36,8 +36,6 @@ document.querySelector(".clock").addEventListener("click", function () {
   is24h = !is24h;
   // get random Image
   getRandomImage(getRandomRng());
-  // get quote
-  getQuote();
 });
 setInterval(clock, 1000);
 
@@ -234,12 +232,44 @@ btnStop.addEventListener("click", function () {
   timerContainer.classList.remove("hidden");
 });
 
+// FACT
+function getFacts() {
+  let a = new XMLHttpRequest();
+  if (a)
+    a.onreadystatechange = function () {
+      function randomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      if (this.readyState == 4 && this.status == 200) {
+        let fact1 = randomInt(1, 48);
+        let fact2 = fact1 + 1;
+        let fact3 = fact2 + 1;
+        const response = JSON.parse(a.responseText);
+        
+        let facts = document.querySelector(".facts");
+        document.querySelector(".facts").innerHTML += response[fact1];
+        document.querySelector(".facts").innerHTML += "<br>";
+        document.querySelector(".facts").innerHTML += "<br>";
+        document.querySelector(".facts").innerHTML += response[fact2];
+        document.querySelector(".facts").innerHTML += "<br>";
+        document.querySelector(".facts").innerHTML += "<br>";
+        document.querySelector(".facts").innerHTML += response[fact3];
+      }
+    };
+  a.open("GET", "facts.json", true);
+  a.send();
+}
+
+getFacts();
+
 // RELOAD
 document.querySelector(".reload").addEventListener("click", function () {
   document.querySelector(".news-box").innerHTML = "";
+  document.querySelector(".facts").innerHTML = "";
   getNews();
   getQuote();
   getJoke();
+  getFacts();
 });
 
 // GitHub Repo Redirect
