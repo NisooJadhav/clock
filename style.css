@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans+Mono:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Schoolbell&display=swap");
 
-html {
-  font: 2vmax/1 "bungee";
-  padding: 0 !important;
-  margin: 0 !important;
-  height: 120vh;
+* {
+  padding: 0;
+  margin: 0;
 }
+html,
 body {
-  padding: 0 !important;
-  margin: 0 !important;
+  font: 2vmax/1 "bungee";
+  height: 120vh;
 }
 a {
   text-decoration: none;
@@ -40,14 +39,6 @@ svg:not(:hover) {
   transition: 0.5s;
 }
 .github {
-  height: auto;
-  width: 2%;
-  position: fixed;
-  cursor: pointer;
-  box-shadow: 1px 1px 5px #00000025;
-  border-radius: 50%;
-  bottom: 0;
-  z-index: 3;
   background: #fff;
   margin: 10px 10px;
   margin-left: 95vw;
@@ -87,6 +78,18 @@ main {
   background-size: 600%;
   user-select: none;
   margin-bottom: 400px;
+}
+/* Animation Keyframes CSS  */
+@keyframes bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .clock:hover {
   cursor: pointer;
@@ -343,18 +346,7 @@ span {
 .font-effect-anaglyph {
   letter-spacing: 8px;
 }
-/* Animation Keyframes CSS  */
-@keyframes bg {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 650px) {
   html {
@@ -364,14 +356,15 @@ span {
     font-size: 2rem;
   }
   .ampm {
-    font-size: 1rem;
-    margin-left: 1.2ch;
+    font-size: 0.75rem;
+    margin-left: 5ch;
+    margin-right: -1ch;
+    padding-right: 0;
   }
   body {
     display: flex;
     flex-direction: column;
     background-size: cover;
-    overflow: hidden;
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 0;
@@ -379,7 +372,8 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: auto;
+    width: 100vw !important;
   }
   main {
     display: flex;
@@ -408,5 +402,46 @@ span {
   }
   .input {
     font-size: 2rem;
+  }
+  .reload {
+    margin-left: 0;
+  }
+  .github {
+    margin-left: 43vw;
+  }
+  .facts-box {
+    font-size: 15px;
+  }
+  .quote {
+    font-size: 45px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .joke-box {
+    padding-top: 10px;
+    margin-top: 0;
+  }
+  .facts-box {
+    padding-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  .news-box {
+    margin-top: 15px;
+  }
+  .news-box img {
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  .news-box h1 {
+    padding-bottom: 5px;
+  }
+  .news-box a {
+    padding: 10px;
+  }
+  .clock {
+    transition: all 0.3s;
+    text-align: center;
+    width: 15rem;
   }
 }

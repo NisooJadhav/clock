@@ -47,12 +47,12 @@ today = dd + " " + mm + " " + yyyy;
 document.querySelector(".day").innerHTML = today;
 
 // QUOTE
+// API -> https://github.com/lukePeavey/quotable
 const quote = document.querySelector("q");
 const cite = document.querySelector("cite");
 
 getQuote();
 
-// API -> https://github.com/lukePeavey/quotable
 async function getQuote() {
   const response = await fetch("https://api.quotable.io/random");
   const data = await response.json();
@@ -67,8 +67,10 @@ async function getQuote() {
 }
 
 // JOKE
+// API -> https://icanhazdadjoke.com/
 const url = "https://icanhazdadjoke.com/";
 const joke = document.querySelector(".joke");
+
 const getJoke = async () => {
   joke.innerText = "loading...";
   try {
@@ -128,6 +130,41 @@ async function getNews() {
     console.log(data);
   }
 }
+
+// FACTS
+function getFacts() {
+  let a = new XMLHttpRequest();
+  if (a)
+    a.onreadystatechange = function () {
+      function randomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      if (this.readyState == 4 && this.status == 200) {
+        const response = JSON.parse(a.responseText);
+
+        function count(obj) {
+          return Object.keys(obj).length;
+        }
+
+        let fact1 = randomInt(1, count(response) - 2);
+        let fact2 = fact1 + 1;
+        let fact3 = fact2 + 1;
+
+        let facts = document.querySelector(".facts");
+        document.querySelector(".facts").innerHTML += response[fact1];
+        document.querySelector(".facts").innerHTML += "<br>";
+        document.querySelector(".facts").innerHTML += "<br>";
+        document.querySelector(".facts").innerHTML += response[fact2];
+        document.querySelector(".facts").innerHTML += "<br>";
+        document.querySelector(".facts").innerHTML += "<br>";
+        document.querySelector(".facts").innerHTML += response[fact3];
+      }
+    };
+  a.open("GET", "db.json", true);
+  a.send();
+}
+
+getFacts();
 
 // TIMER
 const btnTimer = document.querySelector(".timer-button");
@@ -238,41 +275,6 @@ btnStop.addEventListener("click", function () {
   timerContainerCountdown.classList.add("hidden");
   timerContainer.classList.remove("hidden");
 });
-
-// FACT
-function getFacts() {
-  let a = new XMLHttpRequest();
-  if (a)
-    a.onreadystatechange = function () {
-      function randomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-      }
-      if (this.readyState == 4 && this.status == 200) {
-        const response = JSON.parse(a.responseText);
-
-        function count(obj) {
-          return Object.keys(obj).length;
-        }
-
-        let fact1 = randomInt(1, count(response) - 2);
-        let fact2 = fact1 + 1;
-        let fact3 = fact2 + 1;
-
-        let facts = document.querySelector(".facts");
-        document.querySelector(".facts").innerHTML += response[fact1];
-        document.querySelector(".facts").innerHTML += "<br>";
-        document.querySelector(".facts").innerHTML += "<br>";
-        document.querySelector(".facts").innerHTML += response[fact2];
-        document.querySelector(".facts").innerHTML += "<br>";
-        document.querySelector(".facts").innerHTML += "<br>";
-        document.querySelector(".facts").innerHTML += response[fact3];
-      }
-    };
-  a.open("GET", "db.json", true);
-  a.send();
-}
-
-getFacts();
 
 // RELOAD
 document.querySelector(".reload").addEventListener("click", function () {
