@@ -404,7 +404,8 @@ span {
     font-size: 2rem;
   }
   .reload {
-    margin-left: 0;
+    margin-left: 5px;
+    left: 0 !important;
   }
   .github {
     margin-left: 43vw;
