@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&effect=anaglyph&family=Caveat:wght@700&family=Schoolbell&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Bungee&effect=anaglyph);
+
 html,
 body {
   font: 2vmax/1 "bungee";
@@ -33,8 +36,8 @@ svg:not(:hover) {
 }
 .github {
   background: #fff;
-  margin: 10px 10px;
-  margin-left: 95vw;
+  /* margin: 10px 10px; */
+  margin-left: 94.5vw;
   margin-right: 5vw;
   fill: #000;
   opacity: 0.5;
@@ -356,6 +359,10 @@ span {
 @media screen and (max-width: 650px) {
   html {
     font-size: 3vmax;
+  }
+  svg{
+    width: 5%;
+    padding: 0;
   }
   time {
     font-size: 2rem;
