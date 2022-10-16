@@ -109,7 +109,7 @@ async function getNews() {
       document.querySelector(".news-box").innerHTML +=
         "<img src=" +
         data.articles[i].urlToImage +
-        " />" +
+        " loading='lazy'/>" +
         "<h1>" +
         data.articles[i].title +
         "</h1>" +
@@ -123,7 +123,7 @@ async function getNews() {
         "<p>" +
         data.articles[i].description +
         "</p>" +
-        "<hr>";
+        "<hr />";
     }
   } else {
     news.textContent = "an error occured while fetching news :(";
