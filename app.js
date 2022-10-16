@@ -268,7 +268,7 @@ function getFacts() {
         document.querySelector(".facts").innerHTML += response[fact3];
       }
     };
-  a.open("GET", "facts.json", true);
+  a.open("GET", "db.json", true);
   a.send();
 }
 
