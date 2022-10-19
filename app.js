@@ -132,37 +132,29 @@ async function getNews() {
 }
 
 // FACTS
-function getFacts() {
-  let a = new XMLHttpRequest();
-  if (a)
-    a.onreadystatechange = function () {
-      function randomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
+
+const getFacts = async () => {
+  let facts = document.querySelector(".facts");
+  facts.innerText = "loading...";
+  try {
+    const res = await fetch(
+      "https://uselessfacts.jsph.pl/random.json?language=en",
+      {
+        headers: {
+          Accept: "application/json",
+        },
       }
-      if (this.readyState == 4 && this.status == 200) {
-        const response = JSON.parse(a.responseText);
-
-        function count(obj) {
-          return Object.keys(obj).length;
-        }
-
-        let fact1 = randomInt(1, count(response) - 2);
-        let fact2 = fact1 + 1;
-        let fact3 = fact2 + 1;
-
-        let facts = document.querySelector(".facts");
-        document.querySelector(".facts").innerHTML += response[fact1];
-        document.querySelector(".facts").innerHTML += "<br>";
-        document.querySelector(".facts").innerHTML += "<br>";
-        document.querySelector(".facts").innerHTML += response[fact2];
-        document.querySelector(".facts").innerHTML += "<br>";
-        document.querySelector(".facts").innerHTML += "<br>";
-        document.querySelector(".facts").innerHTML += response[fact3];
-      }
-    };
-  a.open("GET", "db.json", true);
-  a.send();
-}
+    );
+    if (!res.ok) {
+      throw new Error("error");
+    }
+    const data = await res.json();
+    facts.innerHTML = data.text;
+  } catch (e) {
+    console.error(e.message);
+    facts.innerHTML = "an error occured while fetching fact :(";
+  }
+};
 
 getFacts();
 

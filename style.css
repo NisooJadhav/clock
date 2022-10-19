@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&effect=anaglyph&family=Caveat:wght@700&family=Schoolbell&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee&effect=anaglyph&family=Caveat:wght@700&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Bungee&effect=anaglyph);
 
 html,
@@ -148,21 +148,40 @@ cite {
 }
 .joke-box,
 .facts-box {
+  height: 25vh;
   margin: 0;
   padding: 0;
   margin-top: 40px;
   text-align: center;
   padding: 0.5rem;
-  font-family: "schoolbell", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: #fff;
-  width: 80vw;
+  width: 39.5vw;
   border-radius: 25px;
   color: #000;
 }
+.joke-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
 .facts-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 25px;
+}
+.joke-fact {
+  font-size: .8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 .news {
   width: 80vw;
@@ -181,7 +200,8 @@ cite {
   font-size: 30px;
 }
 .news-box {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -210,12 +230,13 @@ cite {
   font-size: 0.5rem;
   color: #202020;
 }
-.more_news{
+.more_news {
   cursor: pointer;
   padding: 5px;
   border-radius: 10px;
   padding: 10px 20px;
-  font: .5rem system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font: 0.5rem system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: red;
 }
 .timer-clock__button {
@@ -274,7 +295,7 @@ cite {
   margin: 0;
   border-radius: 3rem;
   color: white;
-  margin-top: -50vh;  
+  margin-top: -50vh;
 }
 .timer-container__countdown {
   height: 15%;
@@ -360,7 +381,7 @@ span {
   html {
     font-size: 3vmax;
   }
-  svg{
+  svg {
     width: 5%;
     padding: 0;
   }
@@ -422,21 +443,12 @@ span {
   .github {
     margin-left: 43vw;
   }
-  .facts-box {
-    font-size: 15px;
-  }
   .quote {
     font-size: 45px;
     padding-bottom: 0;
     margin-bottom: 0;
   }
-  .joke-box {
-    padding-top: 10px;
-    margin-top: 0;
-  }
   .facts-box {
-    padding-top: 10px;
-    margin-top: 15px;
     margin-bottom: 0;
   }
   .news-box {
@@ -457,7 +469,7 @@ span {
     text-align: center;
     width: 15rem;
   }
-  .timer-container__countdown{
+  .timer-container__countdown {
     margin-top: -40vh;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -465,13 +477,19 @@ span {
     padding-top: 0px;
     text-align: center;
   }
-  .timer-container.hidden{
+  .timer-container.hidden {
     display: none;
   }
-  .timer-display{
+  .timer-display {
     height: 80%;
   }
-  .stop{
+  .stop {
     font-size: 1rem;
+  }
+  .joke-fact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
