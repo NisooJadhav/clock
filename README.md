@@ -5,12 +5,11 @@
 Digital Clock made using simple JavaScript and setting background images randomly using Vanilla JavaScript.
 
 ### Pin 📌 this [site](https://nisoojadhav.github.io/clock) in your browser, that will serve as Aesthetic Clock + Wallpaper + Quotes Site.
-(More features coming soon!)
 
 see [page speed](https://pagespeed.web.dev/report?url=https%3A%2F%2Fnisoojadhav.github.io%2Fclock%2F&form_factor=desktop)
 
+example wireframe:
 ![wireframe](https://user-images.githubusercontent.com/68807845/194703978-5e2c7c7e-0c47-453f-8e90-a5abbaef8a2b.png)
-
 
 ## Features
 
