@@ -1,4 +1,4 @@
-# Digital Clock 
+## Aesthetic Clock + Wallpaper + Facts + Jokes + Quotes + News
 
 ![The Digital Clock](https://user-images.githubusercontent.com/68807845/194543175-5b200fb0-4e20-4cc2-9103-ba7f65b78ea2.png)
 
@@ -18,13 +18,14 @@ example wireframe:
 - Jokes to make your day!
 - Top news from around the World
 - Facts to enrich your knowledge
+- Random Wallpaper
 
 ------
 ### - All icons are from: https://icons8.com/
 ### - Show your love 💛 give us a star 🌟
 ### - Contribute to this [project](https://github.com/NisooJadhav/clock/blob/main/CONTRIBUTING.md).
 ------
-<b>The project wouldn't be possible without these awesome people:</b>
+### The project wouldn't be possible without these awesome people:
 
 <a href="https://github.com/nisoojadhav/clock/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=nisoojadhav/clock" />
